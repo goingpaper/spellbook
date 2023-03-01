@@ -31,13 +31,15 @@ function SpellBookHeader() {
                 <FixedPaddingButton variant={location.pathname == "/favourites" ? "contained" : "text"} color="primary" component={RouterLink} to="/favourites">
                     {"Favourites"}
                 </FixedPaddingButton>
-                <TextField
-                    id="filled-basic"
-                    label="Search"
-                    variant="filled"
-                    value={filterText}
-                    onChange={(event) => dispatch(updateText(event.target.value))}
-                    sx={{ marginLeft: "auto" }} />
+                {!location.pathname.includes("/spells") &&
+                    <TextField
+                        id="filled-basic"
+                        label="Search"
+                        variant="filled"
+                        value={filterText}
+                        onChange={(event) => dispatch(updateText(event.target.value))}
+                        sx={{ marginLeft: "auto" }} />
+                }
             </Toolbar>
         </AppBar>
     </Box>
