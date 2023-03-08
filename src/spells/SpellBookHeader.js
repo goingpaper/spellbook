@@ -25,10 +25,10 @@ function SpellBookHeader() {
                 <Typography variant="h5" component="div" sx={{ mr: 2 }}>
                     {"Alex's Spell Book"}
                 </Typography>
-                <FixedPaddingButton variant={location.pathname == "/" ? "contained" : "text"} color="primary" component={RouterLink} to="/">
+                <FixedPaddingButton variant={location.pathname === "/" ? "contained" : "text"} color="primary" component={RouterLink} to="/">
                     {"Spells"}
                 </FixedPaddingButton>
-                <FixedPaddingButton variant={location.pathname == "/favourites" ? "contained" : "text"} color="primary" component={RouterLink} to="/favourites">
+                <FixedPaddingButton variant={location.pathname === "/favourites" ? "contained" : "text"} color="primary" component={RouterLink} to="/favourites">
                     {"Favourites"}
                 </FixedPaddingButton>
                 {!location.pathname.includes("/spells") &&

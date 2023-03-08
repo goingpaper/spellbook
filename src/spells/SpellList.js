@@ -48,7 +48,7 @@ function SpellsList({ showFavourites }) {
                 wrap="nowrap"
                 sx={{ marginTop: 0, overflowY: "auto", height: "53vh", maxHeight: "53vh", paddingLeft: "2rem", paddingRight: "2rem" }}>
                 {
-                    filteredSpells.length == 0 ?
+                    filteredSpells.length === 0 ?
                         <Grid
                             container
                             justifyContent="center"
